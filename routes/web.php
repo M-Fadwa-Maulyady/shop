@@ -13,7 +13,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-// Data Anggota Routes dengan CRUD
+// Data User Routes dengan CRUD
 Route::get('/data-user', [UserController::class, 'index'])->name('dataUser');
 Route::get('/user/create', [UserController::class, 'create'])->name('createUser');
 Route::post('/user/store', [UserController::class, 'store'])->name('storeUser');
@@ -21,7 +21,7 @@ Route::get('/user/edit/{id}', [UserController::class, 'edit'])->name('editUser')
 Route::put('/user/update/{id}', [UserController::class, 'update'])->name('updateUser');
 Route::delete('/user/delete/{id}', [UserController::class, 'destroy'])->name('deleteUser');
 
-// Data Buku Routes dengan CRUD
+// Data Product Routes dengan CRUD
 Route::get('/data-product', [ProductController::class, 'index'])->name('dataProduct');
 Route::get('/data-product/create', [ProductController::class, 'create'])->name('createProduct');
 Route::post('/product/store', [ProductController::class, 'store'])->name('storeProduct');
